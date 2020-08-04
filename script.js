@@ -1,3 +1,5 @@
+var beginBtn = document.querySelector('#beginBtn');
+
 var qAndA = {
   questions: [
     'question1',
@@ -20,3 +22,7 @@ var qAndA = {
   answer8: ['answer1', 'answer2', 'answer3', 'answer4'],
   answer9: ['answer1', 'answer2', 'answer3', 'answer4'],
 };
+
+beginBtn.addEventListener('click', function () {
+  console.log('Hello!');
+});
