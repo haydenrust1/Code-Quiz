@@ -1,4 +1,5 @@
 var beginBtn = document.querySelector('#beginBtn');
+var timer = $('#timer')
 
 var qAndA = [
   {
@@ -48,11 +49,15 @@ var qAndA = [
   },
 ];
 
+function init () {
+
+}
+
 for (var i = 0; i < qAndA.questions.length; i++) {
   if (qAndA.questions[i] !== qAndA.answer) {
   }
 }
-console.log(qAndA.questions[0]);
+console.log(qAndA[0]);
 
 beginBtn.addEventListener('click', function () {
   console.log('Hello!');
