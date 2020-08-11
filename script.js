@@ -18,81 +18,102 @@ var questions = $('.q');
 var qAndA = [
   {
     question: 'What is an event loop in Node.js ?',
-    answers: [
-      'A. An event is first captured by the innermost element and then propagated to outer elements.',
-      'B. An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
-      'C. To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
-      'D. An event is first captured by the outermost element and then propagated to inner elements.',
-    ],
-    correct:
-      'C. To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
+    answers: {
+      A:
+        'An event is first captured by the innermost element and then propagated to outer elements.',
+      B:
+        'An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
+      C:
+        'To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
+      D:
+        'An event is first captured by the outermost element and then propagated to inner elements.',
+    },
+    correct: 'C',
   },
   {
     question: 'What is event capturing (trickling).',
-    answers: [
-      'A. An event is first captured by the innermost element and then propagated to outer elements.',
-      'B. An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
-      'C. To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
-      'D. An event is first captured by the outermost element and then propagated to inner elements.',
-    ],
-    correct:
-      'D. An event is first captured by the outermost element and then propagated to inner elements.',
+    answers: {
+      A:
+        'An event is first captured by the innermost element and then propagated to outer elements.',
+      B:
+        'An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
+      C:
+        'To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
+      D:
+        'An event is first captured by the outermost element and then propagated to inner elements.',
+    },
+    correct: 'D',
   },
   {
     question: 'What is a virtual function?',
-    answers: [
-      'A. An event is first captured by the innermost element and then propagated to outer elements.',
-      'B. An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
-      'C. To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
-      'D. An event is first captured by the outermost element and then propagated to inner elements.',
-    ],
-    correct:
-      'B. An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
+    answers: {
+      A:
+        'An event is first captured by the innermost element and then propagated to outer elements.',
+      B:
+        'An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
+      C:
+        'To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
+      D:
+        'An event is first captured by the outermost element and then propagated to inner elements.',
+    },
+    correct: 'B',
   },
   {
     question: 'What is event delegation?',
-    answers: [
-      'A. Allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements. Eg. Adding an event listener to a UL to catch bubbled events from an LI.',
-      'B. An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
-      'C. To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
-      'D. An event is first captured by the outermost element and then propagated to inner elements.',
-    ],
+    answers: {
+      A:
+        'Allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements. Eg. Adding an event listener to a UL to catch bubbled events from an LI.',
+      B:
+        'An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
+      C:
+        'To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
+      D:
+        'An event is first captured by the outermost element and then propagated to inner elements.',
+    },
     correct:
       'A. Allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements. Eg. Adding an event listener to a UL to catch bubbled events from an LI.',
   },
   {
     question: 'What is event bubbling?',
-    answers: [
-      'A. An event is first captured by the innermost element and then propagated to outer elements.',
-      'B. An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
-      'C. To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
-      'D. An event is first captured by the outermost element and then propagated to inner elements.',
-    ],
-    correct:
-      'A. An event is first captured by the innermost element and then propagated to outer elements.',
+    answers: {
+      A:
+        'An event is first captured by the innermost element and then propagated to outer elements.',
+      B:
+        'An inheritable and overridable function or method for which dynamic dispatch is facilitated. This concept is an important part of the (runtime) polymorphism portion of object-oriented programming (OOP).',
+      C:
+        'To process and handle external events and to convert them into callback invocations an event loop is used. So, at I/O calls, node.js can switch from one request to another.',
+      D:
+        'An event is first captured by the outermost element and then propagated to inner elements.',
+    },
+    correct: 'A',
   },
   {
     question:
       'Node.js is a Server side scripting which is used to build scalable programs. Its multiple advantages over other server side languages, the prominent being non-blocking I/O.',
-    answers: [
-      'What is Node.js?',
-      'What is inversion of control?',
-      'What is strict mode?',
-      'What is polymorphism?',
-    ],
-    correct: 'What is Node.js?',
+    answers: {
+      A: 'What is Node.js?',
+      B: 'What is inversion of control?',
+      C: 'What is strict mode?',
+      D: 'What is polymorphism?',
+    },
+    correct: 'A',
   },
   {
     question:
       'The (what?) method creates a new array with the results of calling a provided function on every element in this array.',
-    answers: ['map()', 'push()', 'create()', 'fill()'],
+    answers: { A: 'map()', B: 'push()', C: 'create()', D: 'fill()' },
     correct: 'map()',
   },
   {
     question:
       'What has the ability of a function to handle objects of many types',
-    answers: ['stict mode', 'tail recursion', 'encapsulation', 'polymorphism'],
-    correct: 'polymorphism',
+    answers: {
+      A: 'stict mode',
+      B: 'tail recursion',
+      C: 'encapsulation',
+      D: 'polymorphism',
+    },
+    correct: 'D',
   },
 ];
 
