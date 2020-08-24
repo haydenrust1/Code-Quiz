@@ -1,18 +1,22 @@
-// selected id's
+$(document).ready(function() {
+  // selected id's
 var beginBtn = $('#beginBtn');
+var nextBtn = $('#nextBtn');
+
 var timer = $('#timer');
 var line = $('#line');
 var correctAns = $('#correct');
 var wrongAns = $('#wrong');
 var questionPrompt = $('#question');
 var description = $('#description');
-var q1Btn = $('#q1');
-var q2Btn = $('#q2');
-var q3Btn = $('#q3');
-var q4Btn = $('#q4');
+var radio1 = $('#radio1');
+var radio2 = $('#radio2');
+var radio3 = $('#radio3');
+var radio4 = $('#radio4');
 
 //selected classes
 var questions = $('.q');
+var radio = $('.radioBox');
 
 //Questions and Answers
 var qAndA = [
@@ -125,19 +129,21 @@ init();
 
 /*This function initializes the application upon opening and restarting the browser*/
 function init() {
-  timer.text(0);
+  timer.text('');
   correctAns.hide();
   wrongAns.hide();
   line.hide();
   questions.hide();
+  radio.hide();
+  nextBtn.hide();
 }
 
 /*function for time on clock*/
 function clockTime() {
-  timer.text(totalSeconds);
+  timer.text(': ' + totalSeconds);
   interval = setInterval(function () {
     totalSeconds--;
-    timer.text(totalSeconds);
+    timer.text(': ' + totalSeconds);
     if (totalSeconds === 0) {
       clearInterval(interval);
     }
@@ -146,36 +152,36 @@ function clockTime() {
 
 /*function for starting quiz on click*/
 function startQuiz() {
+  description.hide();
+  beginBtn.hide();
+  nextBtn.show();
+  radio.show();
+
   // 1. countdown clock
   clockTime();
   // 2. replace header with questions
-  qAndA.forEach(function (element) {
-    console.log(element);
+  // qAndA.forEach(function (element)
+  qAndA.forEach(function(element){
+    
+    console.log($(this));
     questionPrompt.text(element.question);
-    q1Btn.text(element.answers[0]);
-    q2Btn.text(element.answers[1]);
-    q3Btn.text(element.answers[2]);
-    q4Btn.text(element.answers[3]);
+    radio1.text(element.answers.A);
+    radio2.text(element.answers.B);
+    radio3.text(element.answers.C);
+    radio4.text(element.answers.D);
     next++;
   });
-
-  // 3. hide p tag
-  description.hide();
-  // 4. change beginBtn to four buttons with answer choice
-  beginBtn.hide();
-  questions.show();
 }
 
-// //a function to move to the next question
-// function nextQuestion() {
-// }
+//a function to move to the next question
+function nextQuestion() {
+
+}
 
 /*Buttons*/
 beginBtn.on('click', startQuiz);
-// q1Btn.on('click', nextQuestion);
-// q2Btn.on('click', nextQuestion);
-// q3Btn.on('click', nextQuestion);
-// q4Btn.on('click', nextQuestion);
 
 //TEST
 //console.log(qAndA[1].answers[3]);
+
+});

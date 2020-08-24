@@ -25,7 +25,7 @@
           <div class="col-10">
             View Highscores
           </div>
-          <div class="col-2">Time:<span id="timer">0</span></div>
+          <div class="col-2">Time<span id="timer">: 0</span></div>
         </div>
       </div>
     </header>
@@ -35,59 +35,54 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col">
+            <!-- jumbotron -->
             <div id="jumbotron1" class="jumbotron">
               <h1 id="question" class="display-4">Coding Quiz Challenge</h1>
-              <p id="description" class="lead">
-                Select the correct answer to the question and see how many you
-                can get right in the alotted time.<br>
-                If you get a question wrong, you lose 5 seconds.<br>
-                Good luck!
-              </p>
-              <p class="lead">
-                <a
-                  id="beginBtn"
-                  class="btn btn-primary btn-lg"
-                  href="#"
-                  role="button"
-                  >Click to Begin!</a
-                >
-                <a
-                  id="q1"
-                  class="btn btn-primary btn-lg q"
-                  href="#"
-                  role="button"
-                  ></a
-                >
-                <a
-                  id="q2"
-                  class="btn btn-primary btn-lg q"
-                  href="#"
-                  role="button"
-                  ></a
-                >
-                <a
-                  id="q3"
-                  class="btn btn-primary btn-lg q"
-                  href="#"
-                  role="button"
-                  ></a
-                >
-                <a
-                  id="q4"
-                  class="btn btn-primary btn-lg q"
-                  href="#"
-                  role="button"
-                  ></a
-                >
-                <hr id="line" class="my-4" />
-                <p id="correct">
-                  Correct Answer!
+                <p id="description" class="lead">
+                  Select the correct answer to the question and see how many you
+                  can get right in the alotted time.<br>
+                  If you get a question wrong, you lose 5 seconds.<br>
+                  Good luck!
                 </p>
-                <p id="wrong">
-                  Wrong Choice, Nice Try!
-                </p>
-  
-              </p>
+              <!-- form -->
+              <form>
+                <div class="radioBox">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"  value="option1">
+                    <label class="form-check-label" id="radio1" for="radio1">
+                      radio1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"  value="option2">
+                    <label class="form-check-label" id="radio2" for="radio2">
+                      radio2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="option3">
+                    <label class="form-check-label" id="radio3" for="radio3">
+                      radio3
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"  value="option4">
+                    <label class="form-check-label" id="radio4" for="radio4">
+                      radio4
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="beginBtn">Start</button>
+                <button type="submit" class="btn btn-primary" id="nextBtn">Next</button>
+
+              </form>
+                  <hr id="line" class="my-4" />
+                  <p id="correct">
+                    Correct Answer!
+                  </p>
+                  <p id="wrong">
+                    Wrong Choice, Nice Try!
+                  </p>    
             </div>
           </div>
         </div>
