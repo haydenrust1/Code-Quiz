@@ -5,8 +5,8 @@ var nextBtn = $('#nextBtn');
 
 var timer = $('#timer');
 var line = $('#line');
-var correctAns = $('#correct');
-var wrongAns = $('#wrong');
+var correctAnsDisplay = $('#correct');
+var wrongAnsDisplay = $('#wrong');
 var questionPrompt = $('#question');
 var description = $('#description');
 var radio1 = $('#radio1');
@@ -130,8 +130,8 @@ init();
 /*This function initializes the application upon opening and restarting the browser*/
 function init() {
   timer.text('');
-  correctAns.hide();
-  wrongAns.hide();
+  correctAnsDisplay.hide();
+  wrongAnsDisplay.hide();
   line.hide();
   questions.hide();
   radio.hide();
@@ -163,7 +163,7 @@ function startQuiz() {
   // qAndA.forEach(function (element)
   qAndA.forEach(function(element){
     
-    console.log($(this));
+    // console.log($(this));
     questionPrompt.text(element.question);
     radio1.text(element.answers.A);
     radio2.text(element.answers.B);
@@ -175,11 +175,12 @@ function startQuiz() {
 
 //a function to move to the next question
 function nextQuestion() {
-
+  console.log($('input[type=radio]:checked', '#myForm').val())
 }
 
 /*Buttons*/
 beginBtn.on('click', startQuiz);
+nextBtn.on('click', nextQuestion);
 
 //TEST
 //console.log(qAndA[1].answers[3]);
